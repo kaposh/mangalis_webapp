@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1a093b92-0dca-4340-a882-e9d21e6807a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/navigation_bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/navigation_bar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/css/navigation_bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/images/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/images/base/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/images/logo_small.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/images/base/logo_small.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +27,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -36,11 +34,6 @@
               <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
@@ -52,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="17">
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigation_bar.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/home/static/css/navigation_bar.css">
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/static/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="1" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -73,19 +66,29 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="34">
+              <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/apps.py">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="16" />
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="logo.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/static/images/base/logo.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -135,12 +138,13 @@
         <option value="$PROJECT_DIR$/catalog/views.py" />
         <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/home/templates/home/base.html" />
-        <option value="$PROJECT_DIR$/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/mangalis/settings.py" />
         <option value="$PROJECT_DIR$/home/static/style.css" />
         <option value="$PROJECT_DIR$/mangalis/templates/base.html" />
-        <option value="$PROJECT_DIR$/home/templates/base.html" />
         <option value="$PROJECT_DIR$/home/static/css/navigation_bar.css" />
+        <option value="$PROJECT_DIR$/home/static/css/main.css" />
+        <option value="$PROJECT_DIR$/home/templates/home/index.html" />
+        <option value="$PROJECT_DIR$/home/templates/base.html" />
       </list>
     </option>
   </component>
@@ -194,6 +198,14 @@
               <item name="mangalis_webapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="mangalis_webapp" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mangalis_webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mangalis_webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -220,18 +232,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos\mangalis_webapp\home\static\images\main" />
+      <recent name="D:\repos\mangalis_webapp\home\static\images\base" />
+      <recent name="D:\repos\mangalis_webapp\home\static\images" />
+      <recent name="D:\repos\mangalis_webapp\home\templates" />
+      <recent name="D:\repos\mangalis_webapp\home\templates\home" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\repos\mangalis_webapp\mangalis" />
       <recent name="D:\repos\mangalis_webapp\home\templates\home" />
       <recent name="D:\repos\mangalis_webapp\home" />
       <recent name="D:\repos\mangalis_webapp\polls\templates\admin" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\repos\mangalis_webapp\home\static\images" />
-      <recent name="D:\repos\mangalis_webapp\home\templates" />
-      <recent name="D:\repos\mangalis_webapp\home\templates\home" />
-      <recent name="D:\repos\mangalis_webapp\home\static\home" />
-      <recent name="D:\repos\mangalis_webapp\mangalis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -269,7 +281,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23645681" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -310,15 +321,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/views/generic/detail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="167" column="80" selection-start-line="166" selection-start-column="8" selection-end-line="167" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polls/urls.py" />
-    <entry file="file://$PROJECT_DIR$/polls/tests.py" />
     <entry file="file://$PROJECT_DIR$/polls/views.py" />
     <entry file="file://$PROJECT_DIR$/polls/templates/polls/results.html" />
     <entry file="file://$PROJECT_DIR$/polls/templates/polls/index.html" />
@@ -442,9 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -491,27 +490,43 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home/static/home/style.css" />
-    <entry file="file://$PROJECT_DIR$/home/static/images/logo.jpg">
+    <entry file="file://$PROJECT_DIR$/home/static/images/base/logo_small.jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/images/base/logo.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="1" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="34">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/images/main/prague_panorama.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/static/css/navigation_bar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
