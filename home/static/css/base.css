@@ -1,73 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 body {
-	margin: 0;
-	background: #e08947;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+  margin: 0px;
 }
-
-.container {
-	width: 80%;
-	margin: 0 auto;
-}
-
-header {
-  background: #ffffff;
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.logo {
-  float: left;
-  padding: 10px 0;
-}
-
 nav {
-  float: right;
+  margin-top: 20px;
+  padding: 18px;
+  text-align: center;
+  font-family: Raleway;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+#nav-3 {
+  background: #916e3e;
 }
 
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-
-  position: relative;
+.logo-3 {
+    float: left;
+    padding: 0 10px;
+    margin: 0 10px;
 }
 
-nav a {
-  color: #444;
+.link-3 {
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 20px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
+  padding: 0 10px;
+  margin: 0 10px;
 }
-
-nav a:hover {
-  color: #000;
-}
-
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #444;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-  width: 100%;
+.link-3:hover {
+  background-color: #ffffff;
+  color: #EEA200;
+  padding: 15px 10px;
 }
