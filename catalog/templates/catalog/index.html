@@ -1,5 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+{% endblock %}
+{% block content %}
+<h1>KATALOG</h1>
     <ul>
     {% for souvenir in available_souvenirs %}
         <h1>{{ souvenir.name }}</h1>
     {% endfor %}
     </ul>
+{% endblock %}
+
+

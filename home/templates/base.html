@@ -1,17 +1,20 @@
 {% load static %}
 <html>
+<title>Mangalis</title>
 <head>
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    {% block extrahead %}{% endblock %}
 </head>
 <body>
     <header>
         <div class="container">
           <nav id="nav-3">
-              <img class="logo-3" src="{% static 'images/base/logo_small_1.jpg' %}" >
-              <a class="link-3" href="#">Home</a>
-              <a class="link-3" href="#">About</a>
+              <img class="logo-3" src="{% static 'images/base/logo_small_3.png' %}" >
+              <a class="link-3" href="{% url 'home:home-index'%}">Domov</a>
+              <a class="link-3" href="{% url 'catalog:catalog-index'%}">Katalóg</a>
               <a class="link-3" href="#">Pricing</a>
-              <a class="link-3" href="#">Contact</a>
+              <a class="link-3" href="/contact/">Kontakt</a>
           </nav>
         </div>
     </header>
@@ -22,3 +25,23 @@
         </div>
     </main>
 </body>
+<footer class="footer-distributed">
+	<div class="footer-left">
+		<h3>Company<span>logo</span></h3>
+		<p class="footer-company-name">Company Name &copy; 2015</p>
+	</div>
+	<div class="footer-right">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>21 Revolution Street</span> Paris, France</p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+1 555 123456</p>
+    	</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:support@company.com">support@company.com</a></p>
+		</div>
+	</div>
+</footer>
