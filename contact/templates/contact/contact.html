@@ -1,13 +1,78 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/contact.css' %}">
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 {% endblock %}
 {% block content %}
-    <h1>Kontakt</h1>
-    <div id="map"></div>
+    <div id="topLeft">
+        <div>
+            <div class="info_padding">
+                <p class="title">Kontaktné informácie</p>
+            </div>
+        </div>
+        <div>
+            <hr class="style">
+            <div class='inline'>
+                <div class='inline_img'>
+                    <img src="{% static 'images/wooden_envelope.png' %}" width="120" height="120" alt="Adresa obr" />
+                </div>
+            </div>
+            <div class='inline'>
+                <p class="info_left">{{ mangalis_info.meno_firmy }}<br/>{{ mangalis_info.konatel }}<br/>{{ mangalis_info.adresa1 }}<br/>{{ mangalis_info.psc }} {{ mangalis_info.adresa2 }}  <br/> {{ mangalis_info.krajina }}</p>
+            </div>
+            <hr class="style">
+        </div>
+        <div>
+            <div class='inline'>
+                <div class='inline_img'>
+                    <img src="{% static 'images/wooden-telephone.png' %}" width="120" height="120" alt="Telefon obr" />
+                </div>
+            </div>
+            <div class='inline'>
+                <p class="info_left">{{ mangalis_info.konatel }} {{ mangalis_info.telefon }} <br/> {{ mangalis_info.konatel1 }} {{ mangalis_info.telefon1 }}</p>
+            </div>
+            <hr class="style">
+        </div>
+        <div>
+            <div class='inline'>
+                <div class='inline_img'>
+                    <img src="{% static 'images/wooden-gmail.png' %}" width="120" height="120" alt="Gmail obr" />
+                </div>
+            </div>
+            <div class='inline'>Q
+            </div>
+        </div>
+    </div>
+    <div id="topRight">
+        <p class="title">Kde nás nájdete</p>
+        <p class="info_center">{{ mangalis_info.adresa1 }}, {{ mangalis_info.adresa2 }}  <br /> {{ mangalis_info.krajina }}</p>
+        <div id="demoMap" style="height:450px"></div>
+        <script src="{% static 'js/OpenLayers.js' %}"></script>
+        <script>
+
+            var lat = 48.956514;
+            var lon = 18.851828;
+            var zoom = 18;
+
+            var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+            var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+            var position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+            map = new OpenLayers.Map("demoMap");
+            var mapnik         = new OpenLayers.Layer.OSM();
+            map.addLayer(mapnik);
+            map.addLayer(new OpenLayers.Layer.OSM());
+
+            var markers = new OpenLayers.Layer.Markers( "Markers" );
+            map.addLayer(markers);
+            markers.addMarker(new OpenLayers.Marker(position));
+
+            map.setCenter(position, zoom);
+        </script>
+
+    </div>
+    <div id="bottom">C</div>
 {% endblock %}
 
 
