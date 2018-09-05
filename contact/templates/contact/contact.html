@@ -6,48 +6,38 @@
 {% endblock %}
 {% block content %}
     <div id="topLeft">
+
         <div>
             <div class="info_padding">
                 <p class="title">Kontaktné informácie</p>
             </div>
         </div>
-        <div>
-            <hr class="style">
-            <div class='inline'>
-                <div class='inline_img'>
-                    <img src="{% static 'images/wooden_envelope.png' %}" width="120" height="120" alt="Adresa obr" />
-                </div>
+        <hr class="line_dashed">
+        <div class="box">
+            <div class="img_padding">
+                <img src="{% static 'images/wooden_envelope.png' %}" width="120" height="120" alt="Adresa obr" />
             </div>
-            <div class='inline'>
-                <p class="info_left">{{ mangalis_info.meno_firmy }}<br/>{{ mangalis_info.konatel }}<br/>{{ mangalis_info.adresa1 }}<br/>{{ mangalis_info.psc }} {{ mangalis_info.adresa2 }}  <br/> {{ mangalis_info.krajina }}</p>
-            </div>
-            <hr class="style">
+            <p class="info_left">{{ mangalis_info.meno_firmy }}<br/>{{ mangalis_info.konatel }}<br/>{{ mangalis_info.adresa1 }}<br/>{{ mangalis_info.psc }} {{ mangalis_info.adresa2 }}  <br/> {{ mangalis_info.krajina }}</p>
         </div>
-        <div>
-            <div class='inline'>
-                <div class='inline_img'>
-                    <img src="{% static 'images/wooden-telephone.png' %}" width="120" height="120" alt="Telefon obr" />
-                </div>
+        <hr class="line_dashed">
+        <div class="box">
+            <div class="img_padding">
+                <img src="{% static 'images/wooden-telephone.png' %}" width="120" height="120" alt="Telefon obr" />
             </div>
-            <div class='inline'>
-                <p class="info_left">{{ mangalis_info.konatel }} {{ mangalis_info.telefon }} <br/> {{ mangalis_info.konatel1 }} {{ mangalis_info.telefon1 }}</p>
-            </div>
-            <hr class="style">
+            <p class="info_left">{{ mangalis_info.konatel }} {{ mangalis_info.telefon }} <br/> {{ mangalis_info.konatel1 }} {{ mangalis_info.telefon1 }}</p>
         </div>
-        <div>
-            <div class='inline'>
-                <div class='inline_img'>
-                    <img src="{% static 'images/wooden-gmail.png' %}" width="120" height="120" alt="Gmail obr" />
-                </div>
+        <hr class="line_dashed">
+        <div class="box">
+            <div class="img_padding">
+                <img src="{% static 'images/wooden-gmail.png' %}" width="120" height="120" alt="Gmail obr" />
             </div>
-            <div class='inline'>Q
-            </div>
+            <p class="info_left"><a href="mailto:{{ mangalis_info.email }}">{{ mangalis_info.email }}</a></p>
         </div>
+        <hr class="line_dashed">
     </div>
     <div id="topRight">
         <p class="title">Kde nás nájdete</p>
-        <p class="info_center">{{ mangalis_info.adresa1 }}, {{ mangalis_info.adresa2 }}  <br /> {{ mangalis_info.krajina }}</p>
-        <div id="demoMap" style="height:450px"></div>
+        <div id="demoMap" style="height:450px;width: 95%"></div>
         <script src="{% static 'js/OpenLayers.js' %}"></script>
         <script>
 
@@ -70,9 +60,15 @@
 
             map.setCenter(position, zoom);
         </script>
-
     </div>
-    <div id="bottom">C</div>
+    <div id="bottom">
+        <form method="post">
+            {{ form.as_p }}
+            <div class="form-actions">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
 {% endblock %}
 
 
