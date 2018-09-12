@@ -15,21 +15,21 @@
         <hr class="line_dashed">
         <div class="box">
             <div class="img_padding">
-                <img src="{% static 'images/wooden_envelope.png' %}" width="120" height="120" alt="Adresa obr" />
+                <img src="{% static 'images/wooden_envelope.png' %}" width="100" height="100" alt="Adresa obr" />
             </div>
             <p class="info_left">{{ mangalis_info.meno_firmy }}<br/>{{ mangalis_info.konatel }}<br/>{{ mangalis_info.adresa1 }}<br/>{{ mangalis_info.psc }} {{ mangalis_info.adresa2 }}  <br/> {{ mangalis_info.krajina }}</p>
         </div>
         <hr class="line_dashed">
         <div class="box">
             <div class="img_padding">
-                <img src="{% static 'images/wooden-telephone.png' %}" width="120" height="120" alt="Telefon obr" />
+                <img src="{% static 'images/wooden-telephone.png' %}" width="100" height="100" alt="Telefon obr" />
             </div>
             <p class="info_left">{{ mangalis_info.konatel }} {{ mangalis_info.telefon }} <br/> {{ mangalis_info.konatel1 }} {{ mangalis_info.telefon1 }}</p>
         </div>
         <hr class="line_dashed">
         <div class="box">
             <div class="img_padding">
-                <img src="{% static 'images/wooden-gmail.png' %}" width="120" height="120" alt="Gmail obr" />
+                <img src="{% static 'images/wooden-gmail.png' %}" width="100" height="100" alt="Gmail obr" />
             </div>
             <p class="info_left"><a href="mailto:{{ mangalis_info.email }}">{{ mangalis_info.email }}</a></p>
         </div>
@@ -37,7 +37,7 @@
     </div>
     <div id="topRight">
         <p class="title">Kde nás nájdete</p>
-        <div id="demoMap" style="height:450px;width: 95%"></div>
+        <div id="demoMap" style="height:410px;width: 95%"></div>
         <script src="{% static 'js/OpenLayers.js' %}"></script>
         <script>
 
@@ -62,11 +62,16 @@
         </script>
     </div>
     <div id="bottom">
+        <p class="title">Neváhajte nás kontaktovať</p>
         <form method="post">
-            {{ form.as_p }}
-            <div class="form-actions">
-                <button type="submit">Send</button>
-            </div>
+            {% csrf_token %}
+            <div class="formtext">{{ form.sender_name.label }}</div>
+            {{ form.sender_name }}<br>
+            <div class="formtext">{{ form.contact_email.label }}</div>
+            {{ form.contact_email }}<br>
+            <div class="formtext">{{ form.content.label }}</div>
+            {{ form.content }}<br>
+            <button type="submit">Odoslať</button>
         </form>
     </div>
 {% endblock %}
