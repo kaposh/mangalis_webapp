@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'catalog.apps.CatalogConfig',
     'contact.apps.ContactConfig',
     'home.apps.HomeConfig',
-    'sendemail',
+
 ]
 
 MIDDLEWARE = [

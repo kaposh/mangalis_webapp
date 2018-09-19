@@ -6,6 +6,4 @@ class IndexView(generic.ListView):
     context_object_name = 'available_souvenirs'
     def get_queryset(self):
         """Returns active souvenirs"""
-        return Souvenir.objects.filter(
-            available=True
-        ).order_by('name')
+        return Souvenir.objects.filter(available=True).order_by('name')
