@@ -1,9 +1,18 @@
 from django.views import generic
-from .models import Souvenir
+from django.shortcuts import get_object_or_404, render
+from .models import Souvenir, Kategoria
 
-class IndexView(generic.ListView):
-    template_name = 'catalog/index.html'
-    context_object_name = 'available_souvenirs'
-    def get_queryset(self):
-        """Returns active souvenirs"""
-        return Souvenir.objects.filter(available=True).order_by('name')
+def product_list(request, category_slug=None):
+    category=None
+    categories=Kategoria.objects.all()
+    souvenirs = Souvenir.objects.filter(available=True)
+    if category_slug:
+        category=get_object_or_404(Kategoria, slug=category_slug)
+        souvenirs=souvenirs.filter(kategoria=category)
+    return render(request,'catalog/index.html', {'category': category,
+                                                  'categories':categories,
+                                                  'souvenirs':souvenirs})
+
+def product_detail(request, product_slug, id):
+    souvenir =get_object_or_404(Souvenir, id=id, slug=product_slug, available=True)
+    return render(request,'catalog/detail.html', {'suvenir':souvenir})

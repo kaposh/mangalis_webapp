@@ -3,7 +3,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.urls import reverse
-from django.http import HttpResponseRedirect
+
 # Create your views here.
 def contact(request):
     """

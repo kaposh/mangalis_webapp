@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+{% endblock %}
+{% block content %}
+    <h1>Detail page</h1>
+    <h2>{{ suvenir.name }}</h2>
+    <a href="{{ suvenir.kategoria.get_absolute_url }}">{{ suvenir.kategoria.name }}</a>
+    </ul>
+{% endblock %}
+
+
