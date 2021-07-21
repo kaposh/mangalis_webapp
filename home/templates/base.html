@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+<title>Mangalis</title>
+<head>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="container">
+          <nav id="nav-3">
+              <img class="logo-3" src="{% static 'images/base/logo_small_3.png' %}" >
+              <a class="link-3" href="{% url 'home:home-index'%}">Domov</a>
+              <a class="link-3" href="{% url 'catalog:catalog-index'%}">Katalóg</a>
+              <a class="link-3" href="#">O nás</a>
+              <a class="link-3" href="/contact/">Kontakt</a>
+          </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+</body>
+<footer class="footer-distributed">
+	<div class="footer-left">
+		<h3>{{ mangalis_info.meno_firmy }} &copy; 2018</h3>
+		<p class="footer-company-name">{{ mangalis_info.konatel }} </p>
+	</div>
+	<div class="footer-right">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>{{ mangalis_info.adresa1 }}</span>{{ mangalis_info.psc }}, {{ mangalis_info.adresa2 }}<br>{{ mangalis_info.krajina }}</p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>{{ mangalis_info.telefon }}</p>
+    	</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:{{ mangalis_info.email }}">{{ mangalis_info.email }}</a></p>
+		</div>
+	</div>
+</footer>

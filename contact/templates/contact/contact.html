@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+{% block content %}
+<div style="height: 30px;">
+    <div id="topLeft">
+
+        <div>
+            <div class="info_padding">
+                <p class="title">Kontaktné informácie</p>
+            </div>
+        </div>
+        <hr class="line_dashed">
+        <div class="box">
+            <div class="img_padding">
+                <img src="{% static 'images/wooden_envelope.png' %}" width="100" height="100" alt="Adresa obr" />
+            </div>
+            <p class="info_left">{{ mangalis_info.meno_firmy }}<br/>{{ mangalis_info.konatel }}<br/>{{ mangalis_info.adresa1 }}<br/>{{ mangalis_info.psc }} {{ mangalis_info.adresa2 }}  <br/> {{ mangalis_info.krajina }}</p>
+        </div>
+        <hr class="line_dashed">
+        <div class="box">
+            <div class="img_padding">
+                <img src="{% static 'images/wooden-telephone.png' %}" width="100" height="100" alt="Telefon obr" />
+            </div>
+            <p class="info_left">{{ mangalis_info.konatel }} {{ mangalis_info.telefon }} <br/> {{ mangalis_info.konatel1 }} {{ mangalis_info.telefon1 }}</p>
+        </div>
+        <hr class="line_dashed">
+        <div class="box">
+            <div class="img_padding">
+                <img src="{% static 'images/wooden-gmail.png' %}" width="100" height="100" alt="Gmail obr" />
+            </div>
+            <p class="info_left"><a href="mailto:{{ mangalis_info.email }}">{{ mangalis_info.email }}</a></p>
+        </div>
+        <hr class="line_dashed">
+    </div>
+    <div id="topRight">
+        <p class="title">Kde nás nájdete</p>
+        <div id="demoMap" style="height:410px;width: 95%"></div>
+        <script src="{% static 'js/OpenLayers.js' %}"></script>
+        <script>
+
+            var lat = 48.956514;
+            var lon = 18.851828;
+            var zoom = 18;
+
+            var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+            var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+            var position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+            map = new OpenLayers.Map("demoMap");
+            var mapnik         = new OpenLayers.Layer.OSM();
+            map.addLayer(mapnik);
+            map.addLayer(new OpenLayers.Layer.OSM());
+
+            var markers = new OpenLayers.Layer.Markers( "Markers" );
+            map.addLayer(markers);
+            markers.addMarker(new OpenLayers.Marker(position));
+
+            map.setCenter(position, zoom);
+        </script>
+    </div>
+    <div id="bottom">
+        <p class="title">Neváhajte nás kontaktovať</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="formtext">{{ form.sender_name.label }}</div>
+            {{ form.sender_name }}<br>
+            <div class="formtext">{{ form.contact_email.label }}</div>
+            {{ form.contact_email }}<br>
+            <div class="formtext">{{ form.content.label }}</div>
+            {{ form.content }}<br>
+            <button type="submit">Odoslať</button>
+        </form>
+    </div>
+{% endblock %}
+
+

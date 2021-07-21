@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+{% endblock %}
+{% block content %}
+<div id='kategorie_header' style="height: 30px;">{{ category.name }}</div>
+<div style="width: 100%;overflow:auto;">
+    <div style="float:left; width:20%;">
+        <div id='kategorie'>Kategórie</div>
+        <div id='cssmenu'>
+            <ul>
+                <li><a href="{% url "catalog:catalog-index" %}"><span>All</span></a></li>
+                {% for kategoria in categories %}
+                <li><a href="{{ kategoria.get_absolute_url }}"><span>{{ kategoria.name }}</span></a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    <div style="float:left; width:80%;">
+        {% for souvenir in souvenirs %}
+            <img src="{{ souvenir.image.url }}" alt="Italian Trulli">
+            <h2><a href="{{ souvenir.get_absolute_url }}">{{ souvenir.name }}</a></h2>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+
